@@ -7,6 +7,58 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="#" method="post">
+        <table>
+            <tr><td colspan="2"><h1>Registration Form</h1></td></tr>
+            <tr>
+                <td><label for="fname">Name:</label></td>
+                <td><input type="text" name = "name" required></td>
+            </tr>
+            <tr></tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" name = "email"></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Password:</label></td>
+                <td><input type="password" name = "phone"></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address</label></td>
+                <td><textarea rows="3" cols = "20" name="address"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="branch">Branch:</label></td>
+                <td>
+                    <input type="radio" name="branch" value="CSE"> CSE
+                    <input type="radio" name="branch" value="CSE-DS"> CSE-DS
+                    <input type="radio" name="branch" value="CSE-AIML"> CSE-AIML
+                    <input type="radio" name="branch" value="IT"> IT
+                </td>
+            </tr>
+            <tr>
+                <td><label for="lang">Languages:</label></td>
+                <td>
+                    C <input type="checkbox" name="C1">
+                    C++ <input type="checkbox" name="C2">
+                    Java <input type="checkbox" name="Java1">
+                    Python <input type="checkbox" name="Python1">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="DOB">Date Of Birth: </label></td>
+                <td>
+                    <input type="date" id="dob" name="dob">
+                </td>
+            </tr>
+            <tr>
+                <td>Upload Profile</td>
+                <td><input type="file" name="profile"></td> 
+            </tr>
+            <tr><td><input type="button" value="Register"></td>
+            <td>
+                <input type="reset" value="Clear">
+            </td></tr>
+        </table>
+    </form>
 </body>
 </html>
