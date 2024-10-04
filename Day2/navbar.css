@@ -1,0 +1,116 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Main container */
+#mydiv {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-bottom: 1px solid grey;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-right button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-right button:hover {
+    background-color: #0056b3;
+}
+
+/* Success Stories section */
+#maincontent {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #e9ecef;
+}
+
+.success-stories {
+    text-align: center;
+}
+
+.success-stories h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.success-stories .subtitle {
+    font-size: 1rem;
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.testimonial-box {
+    background-color: #fefefe;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.testimonial-box p {
+    color: #333;
+    line-height: 1.5;
+}
+
+.testimonial-box a {
+    color: #007BFF;
+    text-decoration: none;
+
+}
+
+.testimonial-box a:hover {
+    text-decoration: underline;
+}
+
+.testimonial-box strong {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.testimonial-box br {
+    margin-bottom: 5px;
+}
+img{
+    border-radius: 50px;
+}
