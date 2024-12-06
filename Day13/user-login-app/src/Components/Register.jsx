@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-const Register = () => {
+const Register = ({regData}) => {
     const[name,setName]= useState();
     const[email,setEmail]= useState();
     const[password,setPassword]= useState();
     const data={name,email,password};
     const handleRegister=(e)=>{e.preventDefault();
-      alert(data.name);
-    }
+      alert("Register success");
+      regData(data);
+    };
   return (
     <div>
       {name}{email}{password}
