@@ -1,0 +1,22 @@
+/* General app container styling */
+.app-container {
+  background-color: #141414;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Header styling */
+.app-header {
+  background-color: #e50914; /* Netflix red */
+  color: #ffffff;
+  text-align: center;
+  font-size: 24px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
