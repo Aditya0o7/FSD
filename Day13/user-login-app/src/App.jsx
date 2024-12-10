@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainLayout from "./Components/MainLayout";
+import MainLayout from "./components/MainLayout";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
-import DashBoard from "./Components/DashBoard";
-import Logout from "./Components/Logout";
+import Dashboard from "./Components/Dashboard";
+import Logout from "./components/Logout";
 
 const App = () => {
   const [data, setData] = useState();
@@ -17,7 +17,7 @@ const App = () => {
             <Route path="login" element={<Login />} />
             <Route path="register" element={<Register regData={setData} />} />
           </Route>
-          <Route path="dashboard" element={<DashBoard />} />
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="logout" element={<Logout />} />
         </Routes>
       </BrowserRouter>

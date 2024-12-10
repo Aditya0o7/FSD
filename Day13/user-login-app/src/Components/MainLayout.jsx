@@ -1,22 +1,22 @@
-import React from "react";
+import React from 'react'
 import {Link,Outlet} from "react-router-dom";
 
 const MainLayout = () => {
   return (
     <div>
-        <nav>
-            <ul>
-                <li>
-                    <link to="/login">Login</link>
-                </li>
-                <li>
-                    <link to="/register">Register</link>
-                </li>
-            </ul>
-        </nav>
-        <Outlet />
+      <nav>
+        <u1>
+          <li>
+            <Link to="./login">Login</Link>
+          </li>
+          <li>
+            <Link to="./register">Register</Link>
+          </li>
+        </u1>
+      </nav>
+      <Outlet/>
     </div>
-  );
-};
+  )
+}
 
-export default MainLayout;
+export default MainLayout
