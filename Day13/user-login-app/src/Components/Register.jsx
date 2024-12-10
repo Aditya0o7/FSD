@@ -1,55 +1,59 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-const Register = ({regData}) => {
+import "./authStyle.css";
+
+const Register = ({ regData }) => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const data = { name, email, password };
+
   const handleRegister = (e) => {
     e.preventDefault();
-    alert("Register Success");
+    alert("Register Successful!");
     regData(data);
-
   };
-  return (
-    <div>
-      {name},{email},{password}
-      <form>
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            className="form-control"
-            id="name"
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email address:</label>
-          <input
-            type="email"
-            className="form-control"
-            id="email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
 
-        <div className="form-group">
-          <label htmlFor="pwd">Password:</label>
-          <input
-            type="password"
-            className="form-control"
-            id="pwd"
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <br />
-        <button onClick={handleRegister} className="btn btn-primary">
-          Submit
-        </button>
-      </form>
+  return (
+    <div className="auth-container">
+      <div className="auth-box">
+        <h1 className="auth-title">Join Us!</h1>
+        <form>
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              className="form-control auth-input"
+              id="name"
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Enter your name"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email address</label>
+            <input
+              type="email"
+              className="form-control auth-input"
+              id="email"
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="pwd">Password</label>
+            <input
+              type="password"
+              className="form-control auth-input"
+              id="pwd"
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter your password"
+            />
+          </div>
+          <button onClick={handleRegister} className="btn auth-btn">
+            Register
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
