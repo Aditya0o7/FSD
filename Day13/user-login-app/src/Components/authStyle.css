@@ -40,6 +40,7 @@
     box-shadow: 0px 0px 8px rgba(37, 99, 235, 0.5);
     outline: none;
     border-color: #2563eb;
+    scale: 1.01;
   }
   
   .auth-btn {
@@ -86,3 +87,6 @@
     }
   }
   
+  .fade-in {
+    animation: fadeIn 5s ease-in-out;
+}
