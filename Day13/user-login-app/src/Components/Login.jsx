@@ -3,19 +3,32 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./authStyle.css"; 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Notification from "./Notification"
 
 const Login = ({ regLogin }) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [notification, setNotification] = useState(null);
   const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (regLogin.email === email && regLogin.password === password) {
-      alert("Login Successful!");
-      navigate("/dashboard");
+    if (!regLogin || !regLogin.email || !regLogin.password) {
+      setNotification({
+        message: "Invalid credentials! Please register before logging in.",
+        type: "error",
+      });
+    } else if (regLogin.email === email && regLogin.password === password) {
+      setNotification({ message: "Login Successful!", type: "success" });
+      setTimeout(() => {
+        setNotification(null);
+        navigate("/dashboard");
+      }, 1000);
     } else {
-      alert("Login Failed! Please check your credentials.");
+      setNotification({
+        message: "Login Failed! Please check your credentials.",
+        type: "error",
+      });
     }
   };
 
@@ -48,6 +61,13 @@ const Login = ({ regLogin }) => {
             Login
           </button>
         </form>
+        {notification && (
+          <Notification
+            message={notification.message}
+            type={notification.type}
+            onClose={() => setNotification(null)}
+          />
+        )}
       </div>
     </div>
   );

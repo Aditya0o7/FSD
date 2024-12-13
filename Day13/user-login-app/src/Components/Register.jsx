@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./authStyle.css";
+import { useNavigate } from "react-router-dom";
+import Notification from "./Notification"
 
 const Register = ({ regData }) => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
+  const [notification, setNotification] = useState(null);
   const data = { name, email, password };
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
-    alert("Register Successful!");
+    setNotification({ message: "Register Successful!", type: "success" });
     regData(data);
-  };
+    setTimeout(() => {
+      setNotification(null);
+      navigate("/login");
+    }, 1000);
+  }
 
   return (
     <div className="auth-container">
@@ -53,6 +61,13 @@ const Register = ({ regData }) => {
             Register
           </button>
         </form>
+        {notification && (
+          <Notification
+            message={notification.message}
+            type={notification.type}
+            onClose={() => setNotification(null)}
+          />
+        )}
       </div>
     </div>
   );
