@@ -11,7 +11,7 @@ const Weather = () => {
     const [error, setError] = useState(null);
     const [fadeInClass, setFadeInClass] = useState("");
     const navigate = useNavigate();
-    const apiKey = "15a3dbda9fe98615b50fd962aa0fcc3e";
+    const apiKey = "<your api key here>";
 
     useEffect(() => {
 
