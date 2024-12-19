@@ -15,9 +15,13 @@ const Login = ({ regLogin }) => {
     e.preventDefault();
     if (!regLogin || !regLogin.email || !regLogin.password) {
       setNotification({
-        message: "Invalid credentials! Please register before logging in.",
+        message: "User not found! Please register before logging in.",
         type: "error",
       });
+      setTimeout(() => {
+        setNotification(null);
+        navigate("/register");
+      }, 1000);
     } else if (regLogin.email === email && regLogin.password === password) {
       setNotification({ message: "Login Successful!", type: "success" });
       setTimeout(() => {
@@ -29,6 +33,7 @@ const Login = ({ regLogin }) => {
         message: "Login Failed! Please check your credentials.",
         type: "error",
       });
+      
     }
   };
 

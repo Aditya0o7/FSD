@@ -11,7 +11,7 @@ const Weather = () => {
     const [error, setError] = useState(null);
     const [fadeInClass, setFadeInClass] = useState("");
     const navigate = useNavigate();
-    const apiKey = "<your api key here>";
+    const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
     useEffect(() => {
 
